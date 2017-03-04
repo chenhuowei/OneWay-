@@ -18,9 +18,13 @@
     
   
   <dependencies>
-  <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 
-  
+  <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid</artifactId>
+    <version>1.0.23</version>
+</dependency>
   <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 <dependency>
     <groupId>org.mybatis</groupId>
