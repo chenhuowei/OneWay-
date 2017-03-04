@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fireway.Dao.AdminMenuMapper" >
+<mapper namespace="com.fireway.dao.AdminMenuMapper" >
   <resultMap id="BaseResultMap" type="com.fireway.domain.AdminMenu" >
     <id column="id" property="id" jdbcType="CHAR" />
     <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP" />
@@ -15,6 +15,15 @@
   <sql id="Base_Column_List" >
     id, gmt_create, gmt_modified, text, icon, url, status, is_show, pid
   </sql>
+
+
+  <select id="findAll" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from admin_menu
+  </select>
+
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />

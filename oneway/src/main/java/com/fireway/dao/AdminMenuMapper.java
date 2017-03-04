@@ -1,9 +1,10 @@
 package com.fireway.dao;
 
+import java.util.List;
+
 import com.fireway.domain.AdminMenu;
 
 public interface AdminMenuMapper {
-	
     int deleteByPrimaryKey(String id);
 
     int insert(AdminMenu record);
@@ -15,4 +16,5 @@ public interface AdminMenuMapper {
     int updateByPrimaryKeySelective(AdminMenu record);
 
     int updateByPrimaryKey(AdminMenu record);
+    List<AdminMenu> findAll();
 }
